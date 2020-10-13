@@ -1,3 +1,4 @@
+const { runInNewContext } = require("vm");
 
 const Decorator = function(room){
     this.room = room;
@@ -9,9 +10,17 @@ const Decorator = function(room){
      return room.painted
  };
 
+ Decorator.prototype.paintStockAmount = function () {
+    return this.decorator.length;
+  }
 
-//prototype method - people and pets
 
+//look at prototype method - people and pets
+
+
+Decorator.prototype.paintStock = function(paint) {
+    this.decorator.push(paint)
+}
 
 
 
